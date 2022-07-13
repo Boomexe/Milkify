@@ -1,0 +1,10 @@
+{
+  "item.milkify.milk_bottle": "Milk Bottle",
+  "item.milkify.throwable_milk_bottle": "Throwable Milk Bottle",
+  "item.milkify.antidote_milk_bottle": "Antidote Milk Bottle",
+  "item.milkify.throwable_antidote_milk_bottle": "Throwable Antidote Milk Bottle",
+  "item.milkify.debuff_milk_bottle": "Debuff Milk Bottle",
+  "item.milkify.throwable_debuff_milk_bottle": "Throwable Debuff Milk Bottle",
+
+  "itemGroup.milkify.milkify": "Milkify"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "milkify",
+  "version": "${version}",
+
+  "name": "Milkify",
+  "description": "Makes milk more useful in Minecraft!",
+  "authors": [
+    "Boomexe"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "assets/milkify/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.boomexe.milkify.Milkify"
+    ]
+  },
+  "mixins": [
+    "milkify.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
