@@ -17,7 +17,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class MilkBottleThrowableItem extends Item{// extends PotionItem {
+public class MilkBottleThrowableItem extends Item{
     public MilkBottleThrowableItem(Item.Settings settings) {
         super(settings);
     }

@@ -6,7 +6,6 @@
 package net.boomexe.milkify.item;
 
 import net.boomexe.milkify.entity.DebuffMilkPotionEntity;
-import net.boomexe.milkify.entity.MilkPotionEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

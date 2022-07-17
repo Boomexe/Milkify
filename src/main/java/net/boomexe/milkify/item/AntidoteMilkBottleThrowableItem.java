@@ -6,7 +6,6 @@
 package net.boomexe.milkify.item;
 
 import net.boomexe.milkify.entity.AntidoteMilkPotionEntity;
-import net.boomexe.milkify.entity.MilkPotionEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +16,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class AntidoteMilkBottleThrowableItem extends Item{// extends PotionItem {
+public class AntidoteMilkBottleThrowableItem extends Item{
     public AntidoteMilkBottleThrowableItem(Settings settings) {
         super(settings);
     }

@@ -9,8 +9,8 @@
     "Boomexe"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/milkify",
+    "sources": "https://github.com/Boomexe/Milkify"
   },
 
   "license": "MIT",
@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.boomexe.milkify.Milkify"
+    ],
+    "modmenu":[
+      "net.boomexe.milkify.config.ModMenuIntegration"
     ]
   },
   "mixins": [

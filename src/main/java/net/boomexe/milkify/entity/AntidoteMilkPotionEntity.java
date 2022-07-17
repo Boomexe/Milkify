@@ -1,5 +1,6 @@
 package net.boomexe.milkify.entity;
 
+import net.boomexe.milkify.config.MilkifyConfigReader;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -70,7 +71,7 @@ public class AntidoteMilkPotionEntity extends ThrownItemEntity implements Flying
             this.applyMilk();
             this.applySplashPotion(list, hitResult.getType() == HitResult.Type.ENTITY ? ((EntityHitResult)hitResult).getEntity() : null);
 
-            this.world.syncWorldEvent(2007, this.getBlockPos(), 6813183);
+            this.world.syncWorldEvent(2002, this.getBlockPos(), 6813183);
             this.discard();
             if (this.isLingering()) {
                 this.applyLingeringPotion(itemStack, potion);
@@ -85,7 +86,7 @@ public class AntidoteMilkPotionEntity extends ThrownItemEntity implements Flying
     }
 
     private void applyMilk() {
-        Box box = this.getBoundingBox().expand(3.0, 2.0, 3.0);
+        Box box = this.getBoundingBox().expand(MilkifyConfigReader.config.throwable_bottle_effect_range, 2.0, MilkifyConfigReader.config.throwable_bottle_effect_range);
         List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, box);
         if (!list.isEmpty()) {
             Iterator var3 = list.iterator();

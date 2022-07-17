@@ -6,5 +6,10 @@
   "item.milkify.debuff_milk_bottle": "Debuff Milk Bottle",
   "item.milkify.throwable_debuff_milk_bottle": "Throwable Debuff Milk Bottle",
 
-  "itemGroup.milkify.milkify": "Milkify"
+  "itemGroup.milkify.milkify": "Milkify",
+
+  "text.autoconfig.milkify.title": "Milkify Options",
+  "text.autoconfig.milkify.option.bottle_stack_size": "Bottle Stack Size",
+  "text.autoconfig.milkify.option.throwable_bottle_stack_size": "Throwable Bottle Stack Size",
+  "text.autoconfig.milkify.option.throwable_bottle_effect_range": "Throwable Bottle Effect Range"
 }

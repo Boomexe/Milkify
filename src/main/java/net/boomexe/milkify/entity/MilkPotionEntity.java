@@ -1,5 +1,6 @@
 package net.boomexe.milkify.entity;
 
+import net.boomexe.milkify.config.MilkifyConfigReader;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.thrown.PotionEntity;
@@ -68,7 +69,7 @@ public class MilkPotionEntity extends ThrownItemEntity implements FlyingItemEnti
             this.applyMilk();
             this.applySplashPotion(list, hitResult.getType() == net.minecraft.util.hit.HitResult.Type.ENTITY ? ((EntityHitResult)hitResult).getEntity() : null);
 
-            this.world.syncWorldEvent(2007, this.getBlockPos(), 16777215);
+            this.world.syncWorldEvent(2002, this.getBlockPos(), 16777215);
             this.discard();
             if (this.isLingering()) {
                 this.applyLingeringPotion(itemStack, potion);
@@ -82,8 +83,8 @@ public class MilkPotionEntity extends ThrownItemEntity implements FlyingItemEnti
         }
     }
 
-    private void applyMilk() {
-        Box box = this.getBoundingBox().expand(3.0, 2.0, 3.0);
+    protected void applyMilk() {
+        Box box = this.getBoundingBox().expand(MilkifyConfigReader.config.throwable_bottle_effect_range, 2.0, MilkifyConfigReader.config.throwable_bottle_effect_range);
         List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, box);
         if (!list.isEmpty()) {
             Iterator var3 = list.iterator();
@@ -95,7 +96,7 @@ public class MilkPotionEntity extends ThrownItemEntity implements FlyingItemEnti
         }
     }
 
-    private void applySplashPotion(List<StatusEffectInstance> statusEffects, @Nullable Entity entity) {
+    void applySplashPotion(List<StatusEffectInstance> statusEffects, @Nullable Entity entity) {
         applyMilk();
 //        Box box = this.getBoundingBox().expand(3.0, 2.0, 3.0);
 //        List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, box);
@@ -109,7 +110,7 @@ public class MilkPotionEntity extends ThrownItemEntity implements FlyingItemEnti
 //        }
     }
 
-    private void applyLingeringPotion(ItemStack stack, Potion potion) {
+    void applyLingeringPotion(ItemStack stack, Potion potion) {
         AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(this.world, this.getX(), this.getY(), this.getZ());
         Entity entity = this.getOwner();
         if (entity instanceof LivingEntity) {
@@ -136,7 +137,7 @@ public class MilkPotionEntity extends ThrownItemEntity implements FlyingItemEnti
         this.world.spawnEntity(areaEffectCloudEntity);
     }
 
-    private boolean isLingering() {
+    boolean isLingering() {
         return this.getStack().isOf(Items.LINGERING_POTION);
     }
 }

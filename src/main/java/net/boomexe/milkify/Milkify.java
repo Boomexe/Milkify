@@ -1,5 +1,6 @@
 package net.boomexe.milkify;
 
+import net.boomexe.milkify.config.MilkifyConfigReader;
 import net.boomexe.milkify.item.MilkifyItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -11,7 +12,8 @@ public class Milkify implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		MilkifyItems.registerMilkifyItems();
+		MilkifyConfigReader.registerConfigs();
+		MilkifyItems.registerItems();
 
 		LOGGER.info("Milkify Mod Initialized");
 	}
