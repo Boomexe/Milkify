@@ -1,15 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "milkify:milk_bottle"
-    },
-    {
-      "item": "minecraft:golden_apple"
-    }
-  ],
+  "type": "nbtcrafting:brewing",
+  "base": {
+    "item": "milkify:milk_bottle"
+  },
+  "ingredient": {
+    "item": "minecraft:golden_apple"
+  },
   "result": {
-    "item": "milkify:antidote_milk_bottle",
-    "count": 1
+    "item": "milkify:antidote_milk_bottle"
   }
 }

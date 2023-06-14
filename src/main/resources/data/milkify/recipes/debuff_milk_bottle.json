@@ -1,15 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "milkify:antidote_milk_bottle"
-    },
-    {
-      "item": "minecraft:fermented_spider_eye"
-    }
-  ],
+  "type": "nbtcrafting:brewing",
+  "base": {
+    "item": "minecraft:antidote_milk_bottle"
+  },
+  "ingredient": {
+    "item": "minecraft:poisonous_potato"
+  },
   "result": {
-    "item": "milkify:debuff_milk_bottle",
-    "count": 1
+    "item": "milkify:debuff_milk_bottle"
   }
 }

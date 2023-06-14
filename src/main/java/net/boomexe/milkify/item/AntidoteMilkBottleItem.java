@@ -25,7 +25,7 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
 public class AntidoteMilkBottleItem extends Item {
-    private static final int MAX_USE_TIME = 22;
+    private static final int MAX_USE_TIME = 40;
 
     public AntidoteMilkBottleItem(Settings settings) {
         super(settings);
@@ -38,6 +38,7 @@ public class AntidoteMilkBottleItem extends Item {
         }
 
         if (user instanceof PlayerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
+            stack.decrement(1);
         }
 
         if (!world.isClient) {

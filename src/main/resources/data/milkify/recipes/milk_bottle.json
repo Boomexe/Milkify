@@ -1,21 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:milk_bucket"
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "minecraft:glass_bottle"
-    }
-  ],
+  "type": "nbtcrafting:brewing",
+  "base": {
+    "item": "minecraft:glass_bottle"
+  },
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
   "result": {
-    "item": "milkify:milk_bottle",
-    "count": 3
+    "item": "milkify:milk_bottle"
   }
 }

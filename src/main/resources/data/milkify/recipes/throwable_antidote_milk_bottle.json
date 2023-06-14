@@ -1,15 +1,12 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "milkify:antidote_milk_bottle"
-    },
-    {
-      "item": "minecraft:gunpowder"
-    }
-  ],
+  "type": "nbtcrafting:brewing",
+  "base": {
+    "item": "milkify:antidote_milk_bottle"
+  },
+  "ingredient": {
+    "item": "minecraft:gunpowder"
+  },
   "result": {
-    "item": "milkify:throwable_antidote_milk_bottle",
-    "count": 1
+    "item": "milkify:throwable_antidote_milk_bottle"
   }
 }
