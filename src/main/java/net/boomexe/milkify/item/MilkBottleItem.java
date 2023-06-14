@@ -7,7 +7,6 @@ package net.boomexe.milkify.item;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,7 +20,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class MilkBottleItem extends Item {
-    private static final int MAX_USE_TIME = 22;
+    private static final int MAX_USE_TIME = 40;
 
     public MilkBottleItem(Item.Settings settings) {
         super(settings);

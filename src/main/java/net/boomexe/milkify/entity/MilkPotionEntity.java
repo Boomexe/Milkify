@@ -1,6 +1,6 @@
 package net.boomexe.milkify.entity;
 
-import net.boomexe.milkify.config.MilkifyConfigReader;
+import net.boomexe.milkify.config.ModConfigReader;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.thrown.PotionEntity;
@@ -84,7 +84,7 @@ public class MilkPotionEntity extends ThrownItemEntity implements FlyingItemEnti
     }
 
     protected void applyMilk() {
-        Box box = this.getBoundingBox().expand(MilkifyConfigReader.config.throwable_bottle_effect_range, 2.0, MilkifyConfigReader.config.throwable_bottle_effect_range);
+        Box box = this.getBoundingBox().expand(ModConfigReader.config.throwable_bottle_effect_range, 2.0, ModConfigReader.config.throwable_bottle_effect_range);
         List<LivingEntity> list = this.world.getNonSpectatingEntities(LivingEntity.class, box);
         if (!list.isEmpty()) {
             Iterator var3 = list.iterator();

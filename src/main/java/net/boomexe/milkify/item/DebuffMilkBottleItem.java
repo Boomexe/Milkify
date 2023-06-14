@@ -25,7 +25,7 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
 public class DebuffMilkBottleItem extends Item {
-    private static final int MAX_USE_TIME = 22;
+    private static final int MAX_USE_TIME = 40;
 
     public DebuffMilkBottleItem(Item.Settings settings) {
         super(settings);

@@ -6,7 +6,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-public class MilkifyItemGroup {
+public class ModItemGroup {
     public static final ItemGroup MILKIFY = FabricItemGroupBuilder.build(new Identifier(Milkify.MOD_ID, "milkify"),
-            () -> new ItemStack(MilkifyItems.MILK_BOTTLE));
+            () -> new ItemStack(ModItems.MILK_BOTTLE));
 }
